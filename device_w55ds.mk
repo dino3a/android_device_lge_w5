@@ -34,6 +34,11 @@ NFCEE_ACCESS_PATH := device/lge/w55ds/prebuilt/etc/nfcee_access.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240
+    ro.product.device=w55ds \
+    ro.product.model=LG-D285 \
+    persist.radio.multisim.config=dsds \
+    ro.sf.hwrotation=180 \
+    camera2.portability.force_api=0
 
 PRODUCT_COPY_FILES += \
     device/lge/w55ds/mixer_paths.xml:system/etc/mixer_paths.xml \
