@@ -23,17 +23,17 @@
 
 -include device/lge/msm8610-common/BoardConfigCommon.mk
 
-TARGET_KERNEL_CONFIG := w5n_global_com_defconfig
+TARGET_KERNEL_CONFIG := w55ds_global_com_defconfig
 BOARD_CUSTOM_BOOTIMG_MK := device/lge/w5/mkbootimg.mk
 
-TARGET_LIBINIT_DEFINES_FILE := device/lge/w5/init/init_w5.c
+TARGET_LIBINIT_DEFINES_FILE := device/lge/w55ds/init/init_w55ds.c
 
 DEVICE_RESOLUTION := 480x800
 
 TARGET_OTA_ASSERT_DEVICE := w5,w5ds
 
 # Nfc
-BOARD_NFC_HAL_SUFFIX := w5
+BOARD_NFC_HAL_SUFFIX := w55ds
 BOARD_NFC_CHIPSET := pn547
 
--include vendor/lge/w5/BoardConfigVendor.mk
+-include vendor/lge/w55ds/BoardConfigVendor.mk
