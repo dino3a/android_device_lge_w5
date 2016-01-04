@@ -24,7 +24,7 @@
 -include device/lge/msm8610-common/BoardConfigCommon.mk
 
 TARGET_KERNEL_CONFIG := w55ds_global_com_defconfig
-BOARD_CUSTOM_BOOTIMG_MK := device/lge/w5/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/lge/w55ds/mkbootimg.mk
 
 TARGET_LIBINIT_DEFINES_FILE := device/lge/w55ds/init/init_w55ds.c
 
