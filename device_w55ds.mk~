@@ -23,6 +23,15 @@ DEVICE_PACKAGE_OVERLAYS += device/lge/w55ds/overlay
 
 PRODUCT_PACKAGES += Torch
 
+# NFC packages
+PRODUCT_PACKAGES += \
+    NfcNci \
+    Tag \
+    nfc_nci.w55ds \
+    com.android.nfc_extras
+
+NFCEE_ACCESS_PATH := device/lge/w55ds/prebuilt/etc/nfcee_access.xml
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240
     ro.product.device=w55ds \
@@ -33,8 +42,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_COPY_FILES += \
     device/lge/w55ds/mixer_paths.xml:system/etc/mixer_paths.xml \
-    device/lge/msm8610-common/prebuilt/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-       
+    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
+    frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
+    device/lge/w55dsprebuilt/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    device/lge/w55ds/prebuilt/etc/nfc-nci.conf:system/etc/nfc-nci.conf \
+    device/lge/w55ds/prebuilt/etc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
+    device/lge/w55ds/prebuilt/etc/nfcee_access.xml:system/etc/nfcee_access.xml \
+    device/lge/w55ds/prebuilt/etc/init.d/10nfc_checker:system/etc/init.d/10nfc_checker \
+    device/lge/w55ds/prebuilt/etc/init.d/11keys_checker:system/etc/init.d/11keys_checker \
+    device/lge/w55ds/prebuilt/usr/keylayout/gpio-keys_d285.kl:system/usr/keylayout/gpio-keys_d285.kl \
+   
 PRODUCT_LOCALES := en_US
 PRODUCT_LOCALES += hdpi
 PRODUCT_AAPT_CONFIG := normal hdpi

@@ -26,8 +26,14 @@
 TARGET_KERNEL_CONFIG := w55ds_global_com_defconfig
 BOARD_CUSTOM_BOOTIMG_MK := device/lge/w55ds/mkbootimg.mk
 
+TARGET_LIBINIT_DEFINES_FILE := device/lge/w55ds/init/init_w55ds.c
+
 DEVICE_RESOLUTION := 480x800
 
 TARGET_OTA_ASSERT_DEVICE := w55ds
+
+# Nfc
+BOARD_NFC_HAL_SUFFIX := w55ds
+BOARD_NFC_CHIPSET := pn547
 
 -include vendor/lge/w55ds/BoardConfigVendor.mk
